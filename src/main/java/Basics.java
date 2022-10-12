@@ -97,7 +97,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-
+        for (int i = 10; i >= 0; i--) {
+            System.out.println("Current count: " + i);
+        }
 
     }
 
@@ -139,9 +141,10 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-
-        // Fill in the rest of the body here
-
+        String[] working = to_split.split(" ");
+        for (int i = 0; i <= 6; i++) {
+            ret.append(working[i].charAt(0));
+        }
         return ret.toString();
     }
 
@@ -168,7 +171,14 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-
+        if (arr.length <= 1) {
+            return 0;
+        }
+        for (int j = 0; j < arr.length; j++) {
+            if ((j % 2) != 0) {
+                current_sum += arr[j];
+            }
+        }
         return current_sum;
     }
 
@@ -182,4 +192,5 @@ public class Basics {
      *                If the tests don't pass, look at the results and revise
      *                accordingly.
      */
+
 }
